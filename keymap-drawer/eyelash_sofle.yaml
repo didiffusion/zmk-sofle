@@ -53,14 +53,14 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
+  - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - layer1
+  - '&mo1'
   - $$mdi:keyboard-space$$
-  - $$mdi:volume-off$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '2'
   - $$mdi:apple-keyboard-option$$
   - RIGHT GUI
@@ -121,7 +121,7 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
