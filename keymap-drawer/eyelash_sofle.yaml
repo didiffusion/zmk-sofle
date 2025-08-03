@@ -64,7 +64,7 @@ layers:
   - '2'
   - $$mdi:apple-keyboard-option$$
   - RIGHT GUI
-  - RIGHT CTRL
+  - $$mdi:apple-keyboard-control$$
   layer1:
   - {t: '`', s: '~'}
   - F1
