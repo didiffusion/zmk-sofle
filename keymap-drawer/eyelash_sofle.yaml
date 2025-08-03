@@ -105,7 +105,7 @@ layers:
   - (
   - )
   - '|'
-  - '&LSHFT'
+  - $$mdi:apple-keyboard-shift$$
   - {t: '=', s: +}
   - {t: '-', s: _}
   - +
@@ -117,7 +117,7 @@ layers:
   - {t: ;, s: ':'}
   - ':'
   - {t: \, s: '|'}
-  - '&RIGHT_SHIFT'
+  - '&RSHIFT'
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
