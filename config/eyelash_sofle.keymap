@@ -46,36 +46,6 @@
         tap-ms = <100>;
     };
 
-    behaviors {
-        word_prev: word_prev {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        word_next: word_next {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        line_start: line_start {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>;
-            mods = <(MOD_LGUI)>; // Use GUI for CMD-LEFT
-        };
-
-        line_end: line_end {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>;
-            mods = <(MOD_LGUI)>; // Use GUI for CMD-RIGHT
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -129,6 +99,36 @@
 
             sensor-bindings = <&scroll_encoder>;
             display-name = "LAYER 3";
+        };
+    };
+
+    behaviors {
+        word_prev: word_prev {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        word_next: word_next {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        line_start: line_start {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>;
+            mods = <(MOD_LGUI)>; // Use GUI for CMD-LEFT
+        };
+
+        line_end: line_end {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>;
+            mods = <(MOD_LGUI)>; // Use GUI for CMD-RIGHT
         };
     };
 };
