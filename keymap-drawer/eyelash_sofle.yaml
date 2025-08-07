@@ -152,9 +152,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PG UP
-  - '&LC(LEFT)'
+  - '&LC(LEFT_ARROW)'
   - $$mdi:arrow-up-bold$$
-  - '&LC(RIGHT)'
+  - '&LC(RIGHT_ARROW)'
   - _
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
