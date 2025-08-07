@@ -46,6 +46,36 @@
         tap-ms = <100>;
     };
 
+    behaviors {
+        word_prev: word_prev {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        word_next: word_next {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        line_start: line_start {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>;
+            mods = <(MOD_LGUI)>; // Use GUI for CMD-LEFT
+        };
+
+        line_end: line_end {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>;
+            mods = <(MOD_LGUI)>; // Use GUI for CMD-RIGHT
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -77,11 +107,11 @@
 
         raise_layer {
             bindings = <
-&trans  &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans          &trans         &trans           &trans       &trans
-&trans  &kp INSERT    &kp PSCRN     &kp K_APP     &trans       &trans  &trans  &trans  &trans          &kp UP_ARROW   &trans           &kp UNDER    &kp BACKSPACE
-&trans  &out OUT_USB  &out OUT_BLE  &trans        &trans       &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW  &kp DEL      &kp BACKSPACE
-&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE  &trans  &trans  &trans  &trans          &sys_reset     &soft_off        &bootloader  &trans
-&trans  &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans          &trans         &trans           &trans
+&trans  &trans        &trans        &trans        &trans       &trans  &trans  &trans     &trans          &trans         &trans           &trans       &trans
+&trans  &kp INSERT    &kp PSCRN     &kp K_APP     &trans       &trans  &trans  &kp PG_UP  &word_prev      &kp UP_ARROW   &word_next       &kp UNDER    &kp BACKSPACE
+&trans  &out OUT_USB  &out OUT_BLE  &trans        &trans       &CAPS   &trans  &kp PG_DN  &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW  &kp DEL      &kp BACKSPACE
+&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE  &trans  &trans  &trans     &line_start     &trans         &line_end        &bootloader  &trans
+&trans  &trans        &trans        &trans        &trans       &trans  &trans  &trans     &trans          &sys_reset     &soft_off        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
