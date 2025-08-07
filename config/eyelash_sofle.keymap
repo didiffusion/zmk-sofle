@@ -78,9 +78,9 @@
         raise_layer {
             bindings = <
 &trans  &trans        &trans        &trans        &trans       &trans  &trans  &trans     &trans          &trans         &trans           &trans       &trans
-&trans  &kp INSERT    &kp PSCRN     &kp K_APP     &trans       &trans  &trans  &kp PG_UP  &word_prev      &kp UP_ARROW   &word_next       &kp UNDER    &kp BACKSPACE
+&trans  &kp INSERT    &kp PSCRN     &kp K_APP     &trans       &trans  &trans  &kp PG_UP  &LC(LEFT)       &kp UP_ARROW   &LC(RIGHT)       &kp UNDER    &kp BACKSPACE
 &trans  &out OUT_USB  &out OUT_BLE  &trans        &trans       &CAPS   &trans  &kp PG_DN  &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW  &kp DEL      &kp BACKSPACE
-&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE  &trans  &trans  &trans     &line_start     &trans         &line_end        &bootloader  &trans
+&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE  &trans  &trans  &trans     &HOME           &trans         &END             &bootloader  &trans
 &trans  &trans        &trans        &trans        &trans       &trans  &trans  &trans     &trans          &sys_reset     &soft_off        &trans
             >;
 
